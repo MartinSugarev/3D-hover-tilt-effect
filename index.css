@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    
+}
+.container{
+    height: 400px;
+    width: 400px;
+ 
+    position: relative;
+    font-size: 3rem;
+   
+    border-radius: 15px;
+    transition: all 0.6s ease-out;
+    perspective: 1000px;
+} 
+.container:hover{
+  transform: scale(1.1);
+}
+
+
+.span{
+  cursor: pointer;
+  width: 33.333%;
+  height: 33.333%;
+  position: absolute;
+  z-index: 1;
+
+}
+.after-span{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 90px;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease-out;
+    transform: rotateX(-20deg) rotateY(0deg);
+    background-image: url(../IMG_8602.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.span:nth-child(1){left: 0; top: 0;}
+.span:nth-child(2){left: 33.333%; top: 0;}
+.span:nth-child(3){left: 66.666%; top: 0;}
+.span:nth-child(4){left: 0; top: 33.333%;}
+.span:nth-child(5){left: 33.333%; top: 33.333%;}
+.span:nth-child(6){left: 66.666%; top: 33.333%;}
+.span:nth-child(7){left: 0; top: 66.666%;}
+.span:nth-child(8){left: 33.333%; top: 66.666%;}
+.span:nth-child(9){left: 66.666%; top: 66.666%;}
+
+
+
+.span:nth-child(1):hover ~ .after-span{
+    transform: rotateX(-20deg) rotateY(20deg);
+}.span:nth-child(2):hover ~ .after-span{
+    transform: rotateX(0) rotateY(0);
+}
+.span:nth-child(3):hover ~ .after-span{
+    transform: rotateX(20deg) rotateY(20deg);
+}
+.span:nth-child(4):hover ~ .after-span{
+    transform: rotateX(-20deg) rotateY(20deg);
+}.span:nth-child(5):hover ~ .after-span{
+    transform: rotateX(0) rotateY(0);
+}
+.span:nth-child(6):hover ~ .after-span{
+    transform: rotateX(20deg) rotateY(-20deg);
+}
+.span:nth-child(7):hover ~ .after-span{
+    transform: rotateX(-20deg) rotateY(20deg);
+}.span:nth-child(8):hover ~ .after-span{
+    transform: rotateX(0) rotateY(0);
+}
+.span:nth-child(9):hover ~ .after-span{
+    transform: rotateX(20deg) rotateY(-20deg);
+}
