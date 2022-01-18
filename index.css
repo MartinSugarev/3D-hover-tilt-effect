@@ -50,7 +50,7 @@ body{
     transform-style: preserve-3d;
     transition: all 0.6s ease-out;
     transform: rotateX(-20deg) rotateY(0deg);
-    background-image: url(../IMG_8602.jpeg);
+    background-image: url('/image/IMG_8602.jpeg');
     background-size: contain;
     background-repeat: no-repeat;
 }
